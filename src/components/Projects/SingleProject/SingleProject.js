@@ -1,5 +1,4 @@
 import React from 'react';
-import { createStyles } from '@mui/material/styles';
 import { FaPlay, FaCode } from 'react-icons/fa';
 import { Fade } from 'react-awesome-reveal';
 
@@ -7,7 +6,7 @@ import placeholder from '../../../assets/png/placeholder.png';
 import './SingleProject.css';
 
 const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
-    const useStyles = createStyles((t) => ({
+    const styles = {
         iconBtn: {
             display: 'flex',
             alignItems: 'center',
@@ -30,9 +29,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
             transition: 'all 0.2s',
             '&:hover': {},
         },
-    }));
-
-    const classes = useStyles();
+    };
 
     return (
         <Fade bottom>
@@ -54,7 +51,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                             href={demo}
                             target='_blank'
                             rel='noreferrer'
-                            className={classes.iconBtn}
+                            style={styles.iconBtn}
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
@@ -65,7 +62,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                                 id={`${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-demo`}
-                                className={classes.icon}
+                                style={styles.icon}
                                 aria-label='Demo'
                             />
                         </a>
@@ -73,7 +70,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                             href={code}
                             target='_blank'
                             rel='noreferrer'
-                            className={classes.iconBtn}
+                            style={styles.iconBtn}
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
@@ -84,7 +81,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                                 id={`${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-code`}
-                                className={classes.icon}
+                                style={styles.icon}
                                 aria-label='Code'
                             />
                         </a>

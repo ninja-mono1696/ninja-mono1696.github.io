@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { IoIosArrowDropupCircle } from 'react-icons/io';
-import { createStyles } from '@mui/material/styles';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import './BackToTop.css';
@@ -28,14 +27,10 @@ const BackToTop = () => {
 
     window.addEventListener('scroll', toggleVisible);
 
-    const useStyles = createStyles(() => ({
-        icon: {
-            fontSize: '3rem',
-            color: theme.tertiary,
-        },
-    }));
-
-    const classes = useStyles();
+    const style = {
+        fontSize: '3rem',
+        color: theme.tertiary,
+    }
 
     return (
         <div
@@ -43,7 +38,7 @@ const BackToTop = () => {
             className='backToTop'
         >
             <button onClick={scrollToTop} aria-label='Back to top'>
-                <IoIosArrowDropupCircle className={classes.icon} />
+                <IoIosArrowDropupCircle style={style} />
             </button>
         </div>
     );

@@ -1,6 +1,5 @@
 import React,{ useContext} from 'react';
 import { Link } from 'react-router-dom';
-import { createStyles } from '@mui/material/styles';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
@@ -14,7 +13,7 @@ const Projects = () => {
     const { theme } = useContext(ThemeContext);
 
     
-    const useStyles = createStyles(() => ({
+    const styles = {
         viewAllBtn : {
             color: theme.tertiary, 
             backgroundColor: theme.primary,
@@ -39,9 +38,7 @@ const Projects = () => {
                 backgroundColor: theme.secondary,
             }
         },
-    }));
-
-    const classes = useStyles();
+    };
 
     return (
         <>
@@ -70,9 +67,9 @@ const Projects = () => {
                         {projectsData.length > 3 && (
                             <div className="projects--viewAll">
                                 <Link to="/projects">
-                                    <button className={classes.viewAllBtn}>
+                                    <button style={styles.viewAllBtn}>
                                         View All
-                                        <HiArrowRight className={classes.viewArr} />
+                                        <HiArrowRight style={styles.viewArr} />
                                     </button>
                                 </Link>
                             </div>

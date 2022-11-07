@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Button } from '@mui/material';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { createStyles } from '@mui/material/styles';
 
 import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -17,7 +16,7 @@ import {
 const Landing = () => {
     const { theme, drawerOpen } = useContext(ThemeContext);
 
-    const useStyles = createStyles((t) => ({
+    const styles = {
         resumeBtn: {
             color: theme.primary,
             borderRadius: '30px',
@@ -61,9 +60,7 @@ const Landing = () => {
                 display: 'none',
             },
         },
-    }));
-
-    const classes = useStyles();
+    };
 
     return (
         <div className='landing'>
@@ -143,7 +140,7 @@ const Landing = () => {
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <Button className={classes.resumeBtn}>
+                                    <Button style={styles.resumeBtn}>
                                         Download CV
                                     </Button>
                                 </a>
@@ -154,7 +151,7 @@ const Landing = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <Button className={classes.contactBtn}>
+                                <Button style={styles.contactBtn}>
                                     Contact
                                 </Button>
                             </NavLink>

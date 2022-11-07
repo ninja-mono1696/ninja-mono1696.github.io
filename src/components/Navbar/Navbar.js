@@ -6,7 +6,6 @@ import { HiDocumentText } from 'react-icons/hi';
 import { BsFillGearFill } from 'react-icons/bs';
 import { MdPhone } from 'react-icons/md';
 import { FaUser, FaFolderOpen } from 'react-icons/fa';
-import { createStyles } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -29,7 +28,7 @@ const Navbar = () => {
         setHandleDrawer();
     };
 
-    const useStyles = createStyles((t) => ({
+    const styles = {
         navMenu: {
             fontSize: '2.5rem',
             color: theme.tertiary,
@@ -118,9 +117,7 @@ const Navbar = () => {
                 fontSize: '1.385rem',
             },
         },
-    }));
-
-    const classes = useStyles();
+    };
 
     const shortname = (name) => {
         if (name.length > 12) {
@@ -138,7 +135,7 @@ const Navbar = () => {
                 </h1>
 
                 <IoMenuSharp
-                    className={classes.navMenu}
+                    style={styles.navMenu}
                     onClick={handleDrawerOpen}
                     aria-label='Menu'
                 />
@@ -154,7 +151,7 @@ const Navbar = () => {
                 }}
                 anchor='left'
                 open={open}
-                classes={{ paper: classes.MuiDrawer }}
+                classes={{ paper: styles.MuiDrawer }}
                 className='drawer'
                 disableScrollLock={true}
             >
@@ -167,7 +164,7 @@ const Navbar = () => {
                                 handleDrawerClose();
                             }
                         }}
-                        className={classes.closebtnIcon}
+                        style={styles.closebtnIcon}
                         role='button'
                         tabIndex='0'
                         aria-label='Close'
@@ -184,11 +181,11 @@ const Navbar = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <div className={classes.drawerItem}>
+                                <div style={styles.drawerItem}>
                                     <IoHomeSharp
-                                        className={classes.drawerIcon}
+                                        style={styles.drawerIcon}
                                     />
-                                    <span className={classes.drawerLinks}>
+                                    <span style={styles.drawerLinks}>
                                         Home
                                     </span>
                                 </div>
@@ -202,9 +199,9 @@ const Navbar = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <div className={classes.drawerItem}>
-                                    <FaUser className={classes.drawerIcon} />
-                                    <span className={classes.drawerLinks}>
+                                <div style={styles.drawerItem}>
+                                    <FaUser style={styles.drawerIcon} />
+                                    <span style={styles.drawerLinks}>
                                         About
                                     </span>
                                 </div>
@@ -218,11 +215,11 @@ const Navbar = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <div className={classes.drawerItem}>
+                                <div style={styles.drawerItem}>
                                     <HiDocumentText
-                                        className={classes.drawerIcon}
+                                        style={styles.drawerIcon}
                                     />
-                                    <span className={classes.drawerLinks}>
+                                    <span style={styles.drawerLinks}>
                                         Resume
                                     </span>
                                 </div>
@@ -236,11 +233,11 @@ const Navbar = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <div className={classes.drawerItem}>
+                                <div style={styles.drawerItem}>
                                     <BsFillGearFill
-                                        className={classes.drawerIcon}
+                                        style={styles.drawerIcon}
                                     />
-                                    <span className={classes.drawerLinks}>
+                                    <span style={styles.drawerLinks}>
                                         Services
                                     </span>
                                 </div>
@@ -254,11 +251,11 @@ const Navbar = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <div className={classes.drawerItem}>
+                                <div style={styles.drawerItem}>
                                     <FaFolderOpen
-                                        className={classes.drawerIcon}
+                                        style={styles.drawerIcon}
                                     />
-                                    <span className={classes.drawerLinks}>
+                                    <span style={styles.drawerLinks}>
                                         Blog
                                     </span>
                                 </div>
@@ -272,9 +269,9 @@ const Navbar = () => {
                                 spy='true'
                                 duration={2000}
                             >
-                                <div className={classes.drawerItem}>
-                                    <MdPhone className={classes.drawerIcon} />
-                                    <span className={classes.drawerLinks}>
+                                <div style={styles.drawerItem}>
+                                    <MdPhone style={styles.drawerIcon} />
+                                    <span style={styles.drawerLinks}>
                                         Contact
                                     </span>
                                 </div>

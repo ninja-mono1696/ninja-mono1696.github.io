@@ -3,7 +3,6 @@ import { Snackbar, IconButton, SnackbarContent } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
-import { createStyles } from '@mui/material/styles';
 import {
     FaTwitter,
     FaLinkedinIn,
@@ -39,7 +38,7 @@ const Contacts = () => {
         setOpen(false);
     };
 
-    const useStyles = createStyles((t) => ({
+    const styles = {
         input: {
             border: `4px solid ${theme.primary80}`,
             backgroundColor: `${theme.secondary}`,
@@ -117,9 +116,7 @@ const Contacts = () => {
                 backgroundColor: theme.tertiary,
             },
         },
-    }));
-
-    const classes = useStyles();
+    };
 
     const handleContactForm = (e) => {
         e.preventDefault();
@@ -164,7 +161,7 @@ const Contacts = () => {
                     <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
                             <div className='input-container'>
-                                <label htmlFor='Name' className={classes.label}>
+                                <label htmlFor='Name' style={styles.label}>
                                     Name
                                 </label>
                                 <input
@@ -173,13 +170,14 @@ const Contacts = () => {
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
                                     name='Name'
-                                    className={`form-input ${classes.input}`}
+                                    style={styles.input}
+                                    className='form-input'
                                 />
                             </div>
                             <div className='input-container'>
                                 <label
                                     htmlFor='Email'
-                                    className={classes.label}
+                                    style={styles.label}
                                 >
                                     Email
                                 </label>
@@ -189,13 +187,14 @@ const Contacts = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
                                     name='Email'
-                                    className={`form-input ${classes.input}`}
+                                    className='form-input'
+                                    style={styles.input}
                                 />
                             </div>
                             <div className='input-container'>
                                 <label
                                     htmlFor='Message'
-                                    className={classes.label}
+                                    style={styles.label}
                                 >
                                     Message
                                 </label>
@@ -205,14 +204,15 @@ const Contacts = () => {
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
                                     name='Message'
-                                    className={`form-message ${classes.message}`}
+                                    className='form-message'
+                                    style={styles.message}
                                 />
                             </div>
 
                             <div className='submit-btn'>
                                 <button
                                     type='submit'
-                                    className={classes.submitBtn}
+                                    style={styles.submitBtn}
                                 >
                                     <p>{!success ? 'Send' : 'Sent'}</p>
                                     <div className='submit-icon'>
@@ -277,7 +277,7 @@ const Contacts = () => {
                             href={`mailto:${contactsData.email}`}
                             className='personal-details'
                         >
-                            <div className={classes.detailsIcon}>
+                            <div style={styles.detailsIcon}>
                                 <FiAtSign />
                             </div>
                             <p style={{ color: theme.tertiary }}>
@@ -288,7 +288,7 @@ const Contacts = () => {
                             href={`tel:${contactsData.phone}`}
                             className='personal-details'
                         >
-                            <div className={classes.detailsIcon}>
+                            <div style={styles.detailsIcon}>
                                 <FiPhone />
                             </div>
                             <p style={{ color: theme.tertiary }}>
@@ -296,7 +296,7 @@ const Contacts = () => {
                             </p>
                         </a>
                         <div className='personal-details'>
-                            <div className={classes.detailsIcon}>
+                            <div style={styles.detailsIcon}>
                                 <HiOutlineLocationMarker />
                             </div>
                             <p style={{ color: theme.tertiary }}>
@@ -310,7 +310,7 @@ const Contacts = () => {
                                     href={socialsData.twitter}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={classes.socialIcon}
+                                    style={styles.socialIcon}
                                 >
                                     <FaTwitter aria-label='Twitter' />
                                 </a>
@@ -320,7 +320,7 @@ const Contacts = () => {
                                     href={socialsData.github}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={classes.socialIcon}
+                                    style={styles.socialIcon}
                                 >
                                     <FaGithub aria-label='GitHub' />
                                 </a>
@@ -330,7 +330,7 @@ const Contacts = () => {
                                     href={socialsData.linkedIn}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={classes.socialIcon}
+                                    style={styles.socialIcon}
                                 >
                                     <FaLinkedinIn aria-label='LinkedIn' />
                                 </a>
