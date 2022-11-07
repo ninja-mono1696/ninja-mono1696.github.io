@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
-function App() {
+import { ThemeContext } from './contexts/ThemeContext';
+import { Main } from './pages'
+import { BackToTop } from './components'
+import ScrollToTop from './utils/ScrollToTop'
+
+import './App.css'
+
+const App = () => {
+
+  const { theme } = useContext(ThemeContext);
+
+  console.log("%cPORTFOLIO", `color:${theme.primary}; font-size:50px`);
+  console.log("%chttps://github.com/ninja-mono1696/ninja-mono1696.github.io", `color:${theme.tertiary}; font-size:20px`);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <ScrollToTop/>
+        <Routes>
+          <Route path="/" exact component={Main} />
+
+          <Navigate to="/" />
+        </Routes>
+      </Router>
+      <BackToTop />
     </div>
   );
 }
