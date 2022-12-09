@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.contacts--img {
+.contacts_img {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -15,7 +15,7 @@
     pointer-events: none;
 }
 
-.contacts--container {
+.contacts_container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,14 +26,14 @@
     margin-top: 2rem;
 }
 
-.contacts--container > h1 {
+.contacts_container > h1 {
     font-family: var(--primaryFont);
     font-size: 3.5rem;
     margin-bottom: 2.5rem;
 
 }
 
-.contacts-body {
+.contacts_body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -41,13 +41,13 @@
     width: 100%;
 }
 
-.contacts-form {
+.contacts_form {
     display: flex;
     flex: 0.4;
     width: 100%;
 }
 
-.contacts-form form {
+.contacts_form form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -55,11 +55,11 @@
     width: 100%;
 }
 
-.input-container {
+.input_container {
     width: 100%;
 }
 
-.form-input {
+.form_input {
     height: 50px;
     box-sizing: border-box;
     border-radius: 50px; 
@@ -71,7 +71,7 @@
     resize: none;
 }
 
-.form-message {
+.form_message {
     height: 150px;
     box-sizing: border-box;
     border-radius: 50px; 
@@ -83,7 +83,7 @@
     resize: none;
 }
 
-.submit-btn button {
+.submit_btn button {
     border: none;
     outline: none;
     width: 140px;
@@ -97,29 +97,29 @@
     cursor: pointer;
 }
 
-.submit-btn button p {
+.submit_btn button p {
     font-size: 16px;
     font-family: var(--primaryFont);
 }
 
-.submit-icon {
+.submit_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
 }
-.send-icon {
+.send_icon {
     font-size: 25px;
     transform-origin: center;
     transform: translate(5px,-3px) rotate(-30deg);
 }
 
-.success-icon {
+.success_icon {
     font-size: 28px;
     transition: all 0.3s 0.8s ease-in-out;
 }
 
-.contacts-details {
+.contacts_details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -130,7 +130,7 @@
     margin-top: 1.2rem;
 }
 
-.personal-details {
+.personal_details {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -139,7 +139,7 @@
     margin-bottom: 2.5rem;
 }
 
-.personal-details p {
+.personal_details p {
     margin-left: 1.5rem;
     font-size: 18px;
     line-height: 110%;
@@ -149,7 +149,7 @@
     word-break: break-word;
 }
 
-.socialmedia-icons {
+.socialmedia_icons {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -161,13 +161,13 @@
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
-    .contacts--img {
+    .contacts_img {
         position: absolute;
         right: 0;
         bottom: 0;
         width: 240px;
     }
-    .contacts--container {
+    .contacts_container {
         padding: 2rem 4rem;
         width: 90%;
         margin-top: 1rem;
@@ -176,80 +176,80 @@
 
 
 @media screen and (max-width: 992px) {
-    .contacts--img {
+    .contacts_img {
         display: none;
     }
-    .contacts--container {
+    .contacts_container {
         width: 100%;
         margin-top: 1rem;
     }
-    .contacts--container > h1 {
+    .contacts_container > h1 {
         font-size: 3rem;
         margin: 0 0 1.2rem 0;
     }
-    .contacts-details {
+    .contacts_details {
         padding-left: 4rem;
     }
-    .personal-details p {
+    .personal_details p {
         margin-left: 1rem;
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .contacts--container h1 {
+    .contacts_container h1 {
         font-size: 3rem;
         margin-bottom: 30px;
     }
-    .contacts--container {
+    .contacts_container {
         padding: 2rem;
         margin-top: 0rem;
         align-items: center;
     }
-    .contacts-body {
+    .contacts_body {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .contacts-form {
+    .contacts_form {
         display: flex;
         flex: 1;
         width: 80%;
     }
     
-    .form-input {
+    .form_input {
         margin-bottom: 0.45rem;
     }
-    .contacts-form form {
+    .contacts_form form {
         align-items: flex-end;
     }
-    .contacts-details {
+    .contacts_details {
         padding-left: 0rem;
         padding: 1rem;
         align-items: center;
         margin-top: 2rem;
     }
-    .socialmedia-icons {
+    .socialmedia_icons {
         width: 100%;
         gap: 1.5rem;
         margin-top: 2rem;
     }
-    .personal-details {
+    .personal_details {
         margin-bottom: 1.8rem;
     }
-    .personal-details p {
+    .personal_details p {
         margin-left: 1.2rem;
         width: 95%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .contacts-form {
+    .contacts_form {
         display: flex;
         flex: 1;
         width: 100%;
     }
-    .contacts--container h1 {
+    .contacts_container h1 {
         font-size: 2.5rem;
         margin-bottom: 20px;
     }

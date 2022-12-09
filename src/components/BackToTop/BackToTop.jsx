@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { IoIosArrowDropupCircle } from 'react-icons/io';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import './BackToTop.css';
+import styles from './BackToTop.module.css';
 
 const BackToTop = () => {
     const [visible, setVisible] = useState(false);
@@ -35,7 +35,7 @@ const BackToTop = () => {
     return (
         <div
             style={{ display: visible ? 'inline' : 'none' }}
-            className='backToTop'
+            className={styles.backToTop}
         >
             <button onClick={scrollToTop} aria-label='Back to top'>
                 <IoIosArrowDropupCircle style={style} />

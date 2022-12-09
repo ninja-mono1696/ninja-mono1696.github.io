@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { ThemeContext } from './contexts/ThemeContext';
-import { Main } from './pages'
-import { BackToTop } from './components'
-import ScrollToTop from './utils/ScrollToTop'
+import { Main } from './pages';
+import { BackToTop } from './components';
+// import ScrollToTop from './utils/ScrollToTop';
 
 import './App.css'
 
@@ -16,9 +16,9 @@ function App() {
 
   return (
     <div className="app">
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Routes>
-        <Route path="/" exact component={Main} />
+        <Route path="/" element={<Main />} />
       </Routes>
       <BackToTop />
     </div>

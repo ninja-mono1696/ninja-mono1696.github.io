@@ -30,13 +30,13 @@
     padding: 0 2rem;
 }
 
-.skill--scroll {
+.skill_scroll {
     width: 100%;
     margin: 0 2rem;
 }
 
 
-.skill--box {
+.skill_box {
     background: #FAFAFA;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
@@ -51,18 +51,18 @@
     transition: 300ms ease-in-out;
 }
 
-.skill--box:hover  {
+.skill_box:hover  {
     transform: scale(1.15);
 }
 
 
-.skill--box > img {
+.skill_box > img {
     height: 50px;
     pointer-events: none;
 }
 
 
-.skill--box h3 {
+.skill_box h3 {
     font-family: Big Shoulders Text;
     font-style: normal;
     font-weight: 500;
@@ -100,19 +100,19 @@
     .skillsHeader h2 {
         font-size: 3.2rem;
     }
-    .skill--box {
+    .skill_box {
         width: 150px;
         height: 150px;
         margin: 1.2rem;
         padding: 2rem 1rem;
     }
 
-    .skill--box > img {
+    .skill_box > img {
         height: 45px;
     }
 
 
-    .skill--box h3 {
+    .skill_box h3 {
         font-size: 20px;
         margin-top: 1rem;
     }
@@ -130,21 +130,21 @@
         font-size: 3rem;
     }
 
-    .skill--scroll {
+    .skill_scroll {
         width: 100%;
         margin: 0;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .skill--box {
+    .skill_box {
         width: 135px;
         height: 135px;
         margin: 1.2rem;
         padding: 2rem 1rem;
     }
 
-    .skill--box > img {
+    .skill_box > img {
         height: 40px;
     }
 
@@ -152,7 +152,7 @@
         font-size: 2.5rem;
     }
 
-    .skill--box h3 {
+    .skill_box h3 {
         font-size: 18px;
         margin-top: 1rem;
     }

@@ -9,7 +9,7 @@ import { FaUser, FaFolderOpen } from 'react-icons/fa';
 import Drawer from '@mui/material/Drawer';
 import CloseIcon from '@mui/icons-material/Close';
 
-import './Navbar.css';
+import style from './Navbar.module.css';
 import { headerData } from '../../data/headerData';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
@@ -38,16 +38,10 @@ const Navbar = () => {
             '&:hover': {
                 color: theme.primary,
             },
-            [t.breakpoints.down('sm')]: {
-                fontSize: '2.5rem',
-            },
-            [t.breakpoints.down('xs')]: {
-                fontSize: '2rem',
-            },
         },
         MuiDrawer: {
             padding: '0em 1.8em',
-            width: '14em',
+            width: '20em',
             fontFamily: ' var(--primaryFont)',
             fontStyle: ' normal',
             fontWeight: ' normal',
@@ -56,9 +50,6 @@ const Navbar = () => {
             overflow: 'hidden',
             borderTopRightRadius: '40px',
             borderBottomRightRadius: '40px',
-            [t.breakpoints.down('sm')]: {
-                width: '12em',
-            },
         },
         closebtnIcon: {
             fontSize: '2rem',
@@ -72,22 +63,18 @@ const Navbar = () => {
             '&:hover': {
                 color: theme.tertiary,
             },
-            [t.breakpoints.down('sm')]: {
-                right: 20,
-                top: 20,
-            },
         },
         drawerItem: {
+            width: '90%',
+            height: '60px',
+            padding: '0 30px',
+            display: 'flex',
             margin: '2rem auto',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
             borderRadius: '78.8418px',
             background: theme.secondary,
             color: theme.primary,
-            width: '85%',
-            height: '60px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-evenly',
-            padding: '0 30px',
             boxSizing: 'border-box',
             border: '2px solid',
             borderColor: theme.primary,
@@ -96,31 +83,20 @@ const Navbar = () => {
                 background: theme.primary,
                 color: theme.secondary,
             },
-            [t.breakpoints.down('sm')]: {
-                width: '100%',
-                padding: '0 25px',
-                height: '55px',
-            },
         },
         drawerLinks: {
             fontFamily: 'var(--primaryFont)',
             width: '50%',
-            fontSize: '1.3rem',
+            fontSize: '1rem',
             fontWeight: 600,
-            [t.breakpoints.down('sm')]: {
-                fontSize: '1.125rem',
-            },
         },
         drawerIcon: {
-            fontSize: '1.6rem',
-            [t.breakpoints.down('sm')]: {
-                fontSize: '1.385rem',
-            },
+            fontSize: '1.4rem',
         },
     };
 
     const shortname = (name) => {
-        if (name.length > 12) {
+        if (name.length > 15) {
             return name.split(' ')[0];
         } else {
             return name;
@@ -128,8 +104,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className='navbar'>
-            <div className='navbar--container'>
+        <div className={style.navbar}>
+            <div className={style.navbar_container}>
                 <h1 style={{ color: theme.secondary }}>
                     {shortname(headerData.name)}
                 </h1>
@@ -151,11 +127,11 @@ const Navbar = () => {
                 }}
                 anchor='left'
                 open={open}
-                classes={{ paper: styles.MuiDrawer }}
-                className='drawer'
+                style={styles.MuiDrawer}
+                className={style.drawer}
                 disableScrollLock={true}
             >
-                <div className='div-closebtn'>
+                <div className={style.div_closebtn}>
                     <CloseIcon
                         onClick={handleDrawerClose}
                         onKeyDown={(e) => {
@@ -173,7 +149,7 @@ const Navbar = () => {
                 <br />
 
                 <div onClick={handleDrawerClose}>
-                    <div className='navLink--container'>
+                    <div className={style.navLink_container}>
                         <Fade left>
                             <NavLink
                                 to='/'

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Button } from '@mui/material';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-import './Landing.css';
+import style from './Landing.module.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
@@ -18,14 +18,14 @@ const Landing = () => {
 
     const styles = {
         resumeBtn: {
+            width: '150px',
+            height: '50px',
             color: theme.primary,
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
             fontSize: '1rem',
             fontWeight: '500',
-            height: '50px',
             fontFamily: 'var(--primaryFont)',
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
@@ -34,18 +34,15 @@ const Landing = () => {
                 color: theme.secondary,
                 border: `3px solid ${theme.tertiary}`,
             },
-            [t.breakpoints.down('sm')]: {
-                width: '180px',
-            },
         },
         contactBtn: {
+            width: '150px',
+            height: '50px',
             backgroundColor: theme.primary,
             color: theme.secondary,
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
-            height: '50px',
             fontSize: '1rem',
             fontWeight: '500',
             fontFamily: 'var(--primaryFont)',
@@ -56,20 +53,17 @@ const Landing = () => {
                 color: theme.tertiary,
                 border: `3px solid ${theme.tertiary}`,
             },
-            [t.breakpoints.down('sm')]: {
-                display: 'none',
-            },
         },
-    };
+    }
 
     return (
-        <div className='landing'>
-            <div className='landing--container'>
+        <div className={style.landing}>
+            <div className={style.landing_container}>
                 <div
-                    className='landing--container-left'
+                    className={style.landing_container_left}
                     style={{ backgroundColor: theme.primary }}
                 >
-                    <div className='lcl--content'>
+                    <div className={style.lcl_content}>
                         {socialsData.linkedIn && (
                             <a
                                 href={socialsData.linkedIn}
@@ -77,7 +71,7 @@ const Landing = () => {
                                 rel='noreferrer'
                             >
                                 <FaLinkedin
-                                    className='landing--social'
+                                    className={style.landing_social}
                                     style={{ color: theme.secondary }}
                                     aria-label='LinkedIn'
                                 />
@@ -90,7 +84,7 @@ const Landing = () => {
                                 rel='noreferrer'
                             >
                                 <FaGithub
-                                    className='landing--social'
+                                    className={style.landing_social}
                                     style={{ color: theme.secondary }}
                                     aria-label='GitHub'
                                 />
@@ -103,7 +97,7 @@ const Landing = () => {
                                 rel='noreferrer'
                             >
                                 <FaTwitter
-                                    className='landing--social'
+                                    className={style.landing_social}
                                     style={{ color: theme.secondary }}
                                     aria-label='Twitter'
                                 />
@@ -114,25 +108,25 @@ const Landing = () => {
                 <img
                     src={headerData.image}
                     alt=''
-                    className='landing--img'
+                    className={style.landing_img}
                     style={{
                         opacity: `${drawerOpen ? '0' : '1'}`,
                         borderColor: theme.secondary,
                     }}
                 />
                 <div
-                    className='landing--container-right'
+                    className={style.landing_container_right}
                     style={{ backgroundColor: theme.secondary }}
                 >
                     <div
-                        className='lcr--content'
+                        className={style.lcr_content}
                         style={{ color: theme.tertiary }}
                     >
                         <h6>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
                         <p>{headerData.desciption}</p>
 
-                        <div className='lcr-buttonContainer'>
+                        <div className={style.lcr_buttonContainer}>
                             {headerData.resumePdf && (
                                 <a
                                     href={headerData.resumePdf}

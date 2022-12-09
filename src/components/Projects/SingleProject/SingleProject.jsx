@@ -3,7 +3,7 @@ import { FaPlay, FaCode } from 'react-icons/fa';
 import { Fade } from 'react-awesome-reveal';
 
 import placeholder from '../../../assets/png/placeholder.png';
-import './SingleProject.css';
+import style from './SingleProject.module.css';
 
 const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
     const styles = {
@@ -35,10 +35,10 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
         <Fade bottom>
             <div
                 key={id}
-                className='singleProject'
+                className={style.singleProject}
                 style={{ backgroundColor: theme.primary400 }}
             >
-                <div className='projectContent'>
+                <div className={style.projectContent}>
                     <h2
                         id={name.replace(' ', '-').toLowerCase()}
                         style={{ color: theme.tertiary }}
@@ -46,7 +46,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                         {name}
                     </h2>
                     <img src={image ? image : placeholder} alt={name} />
-                    <div className='project--showcaseBtn'>
+                    <div className={style.project_showcaseBtn}>
                         <a
                             href={demo}
                             target='_blank'
@@ -88,7 +88,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                     </div>
                 </div>
                 <p
-                    className='project--desc'
+                    className={style.project_desc}
                     style={{
                         background: theme.secondary,
                         color: theme.tertiary,
@@ -97,7 +97,7 @@ const SingleProject = ({ id, name, desc, tags, code, demo, image, theme }) => {
                     {desc}
                 </p>
                 <div
-                    className='project--lang'
+                    className={style.project_lang}
                     style={{
                         background: theme.secondary,
                         color: theme.tertiary80,

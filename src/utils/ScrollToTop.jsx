@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const ScrollToTop= ({ history }) => {
   useEffect(() => {
@@ -14,10 +14,12 @@ const ScrollToTop= ({ history }) => {
   return (null);
 }
 
-const ScrollTop = () => {
-  const navigate = useNavigate();
 
-  return navigate(ScrollToTop);
-}
+// const ScrollTop = () => {
+//   const navigate = useNavigate();
 
-export default ScrollTop;
+
+//   return navigate(ScrollToTop);
+// }
+
+export default ScrollToTop;

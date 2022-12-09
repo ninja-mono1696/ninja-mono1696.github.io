@@ -5,7 +5,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { HiArrowRight } from "react-icons/hi";
 
-import './Projects.css';
+import style from './Projects.module.css';
 import SingleProject from './SingleProject/SingleProject';
 
 const Projects = () => {
@@ -43,12 +43,12 @@ const Projects = () => {
     return (
         <>
             {projectsData.length > 0 && (
-                <div className="projects" id="projects" style={{backgroundColor: theme.secondary}}>
-                    <div className="projects--header">
+                <div className={style.projects} id="projects" style={{backgroundColor: theme.secondary}}>
+                    <div className={style.projects_header}>
                         <h1 style={{color: theme.primary}}>Projects</h1>
                     </div>
-                    <div className="projects--body">
-                        <div className="projects--bodyContainer">
+                    <div className={style.projects_body}>
+                        <div className={style.projects_bodyContainer}>
                             {projectsData.slice(0, 3).map(project => (
                                 <SingleProject
                                     theme={theme}
@@ -65,7 +65,7 @@ const Projects = () => {
                         </div> 
 
                         {projectsData.length > 3 && (
-                            <div className="projects--viewAll">
+                            <div className={style.projects_viewAll}>
                                 <Link to="/projects">
                                     <button style={styles.viewAllBtn}>
                                         View All
@@ -77,7 +77,6 @@ const Projects = () => {
                     </div>
                 </div>
             )}
-
         </>
     )
 }

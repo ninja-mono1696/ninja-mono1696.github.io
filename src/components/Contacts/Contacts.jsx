@@ -16,7 +16,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { socialsData } from '../../data/socialsData';
 import { contactsData } from '../../data/contactsData';
-import './Contacts.css';
+import style from './Contacts.module.css';
 
 const Contacts = () => {
     const [open, setOpen] = useState(false);
@@ -151,16 +151,16 @@ const Contacts = () => {
 
     return (
         <div
-            className='contacts'
+            className={style.contacts}
             id='contacts'
             style={{ backgroundColor: theme.secondary }}
         >
-            <div className='contacts--container'>
+            <div className={style.contacts_container}>
                 <h1 style={{ color: theme.primary }}>Contacts</h1>
-                <div className='contacts-body'>
-                    <div className='contacts-form'>
+                <div className={style.contacts_body}>
+                    <div className={style.contacts_form}>
                         <form onSubmit={handleContactForm}>
-                            <div className='input-container'>
+                            <div className={style.input_container}>
                                 <label htmlFor='Name' style={styles.label}>
                                     Name
                                 </label>
@@ -171,10 +171,10 @@ const Contacts = () => {
                                     type='text'
                                     name='Name'
                                     style={styles.input}
-                                    className='form-input'
+                                    className={style.form_input}
                                 />
                             </div>
-                            <div className='input-container'>
+                            <div className={style.input_container}>
                                 <label
                                     htmlFor='Email'
                                     style={styles.label}
@@ -187,11 +187,11 @@ const Contacts = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
                                     name='Email'
-                                    className='form-input'
+                                    className={style.form_input}
                                     style={styles.input}
                                 />
                             </div>
-                            <div className='input-container'>
+                            <div className={style.input_container}>
                                 <label
                                     htmlFor='Message'
                                     style={styles.label}
@@ -204,20 +204,20 @@ const Contacts = () => {
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
                                     name='Message'
-                                    className='form-message'
+                                    className={style.form_message}
                                     style={styles.message}
                                 />
                             </div>
 
-                            <div className='submit-btn'>
+                            <div className={style.submit_btn}>
                                 <button
                                     type='submit'
                                     style={styles.submitBtn}
                                 >
                                     <p>{!success ? 'Send' : 'Sent'}</p>
-                                    <div className='submit-icon'>
+                                    <div className={style.submit_icon}>
                                         <AiOutlineSend
-                                            className='send-icon'
+                                            className={style.send_icon}
                                             style={{
                                                 animation: !success
                                                     ? 'initial'
@@ -228,7 +228,7 @@ const Contacts = () => {
                                             }}
                                         />
                                         <AiOutlineCheckCircle
-                                            className='success-icon'
+                                            className={style.success_icon}
                                             style={{
                                                 display: !success
                                                     ? 'none'
@@ -272,10 +272,10 @@ const Contacts = () => {
                         </Snackbar>
                     </div>
 
-                    <div className='contacts-details'>
+                    <div className={style.contacts_details}>
                         <a
                             href={`mailto:${contactsData.email}`}
-                            className='personal-details'
+                            className={style.personal_details}
                         >
                             <div style={styles.detailsIcon}>
                                 <FiAtSign />
@@ -286,7 +286,7 @@ const Contacts = () => {
                         </a>
                         <a
                             href={`tel:${contactsData.phone}`}
-                            className='personal-details'
+                            className={style.personal_details}
                         >
                             <div style={styles.detailsIcon}>
                                 <FiPhone />
@@ -295,7 +295,7 @@ const Contacts = () => {
                                 {contactsData.phone}
                             </p>
                         </a>
-                        <div className='personal-details'>
+                        <div className={style.personal_details}>
                             <div style={styles.detailsIcon}>
                                 <HiOutlineLocationMarker />
                             </div>
@@ -304,7 +304,7 @@ const Contacts = () => {
                             </p>
                         </div>
 
-                        <div className='socialmedia-icons'>
+                        <div className={style.socialmedia_icons}>
                             {socialsData.twitter && (
                                 <a
                                     href={socialsData.twitter}
@@ -342,7 +342,7 @@ const Contacts = () => {
             <img
                 src={theme.contactsimg}
                 alt='contacts'
-                className='contacts--img'
+                className={style.contacts_img}
             />
         </div>
     );
