@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90fa4f94.css",
+    "main.js": "/static/js/main.ce4b1e44.js",
+    "static/media/E-Carry.png": "/static/media/E-Carry.006e35ae82452c4cf68e.png",
+    "static/media/Medease.png": "/static/media/Medease.d1d35edab8ee4d2d2f68.png",
+    "static/media/Bontime.png": "/static/media/Bontime.9e4998ef803694c0041e.png",
+    "static/media/Bluemercury.png": "/static/media/Bluemercury.d732383a3f6e0270c4de.png",
+    "static/media/Monojit-Mondal-Resume.pdf": "/static/media/Monojit-Mondal-Resume.e15ad1486c8cc208237d.pdf",
+    "static/media/LeadIQ.png": "/static/media/LeadIQ.45fe15f863db585b5c12.png",
+    "static/media/my-pic.png": "/static/media/my-pic.4a9e020504d6b53366d0.png",
+    "static/media/BestermindRegular.ttf": "/static/media/BestermindRegular.e58a192233afb30a6a59.ttf",
+    "index.html": "/index.html",
+    "main.90fa4f94.css.map": "/static/css/main.90fa4f94.css.map",
+    "main.ce4b1e44.js.map": "/static/js/main.ce4b1e44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90fa4f94.css",
+    "static/js/main.ce4b1e44.js"
+  ]
+}
