@@ -15,7 +15,7 @@ export const projectsData = [
     tech: "React | Redux | JSON-Server | Chakra-UI",
     code: "https://github.com/ninja-mono1696/acidic-rhythm-139",
     demo: "https://e-carry.netlify.app/",
-    category: "react",
+    category: "mern",
   },
   {
     id: 2,

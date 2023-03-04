@@ -22,6 +22,15 @@ const Github = () => {
           />
         </a>
       </div>
+      <div className="github_container container">
+        <a href="https://github.com/ninja-mono1696" target="_blank" rel="noreferrer">
+          <img
+            alt="Github Stats"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=ninja-mono1696&show_icons=true&count_private=true&theme=algolia"
+            height="192px"
+          />
+        </a>
+      </div>
     </section>
   );
 };
