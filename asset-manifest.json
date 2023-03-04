@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.90fa4f94.css",
-    "main.js": "/static/js/main.f22c3a03.js",
+    "main.js": "/static/js/main.29f425d4.js",
     "static/media/E-Carry.png": "/static/media/E-Carry.006e35ae82452c4cf68e.png",
     "static/media/Medease.png": "/static/media/Medease.d1d35edab8ee4d2d2f68.png",
     "static/media/Eve.png": "/static/media/Eve.c0419b8231bad505b5eb.png",
@@ -13,10 +13,10 @@
     "static/media/BestermindRegular.ttf": "/static/media/BestermindRegular.e58a192233afb30a6a59.ttf",
     "index.html": "/index.html",
     "main.90fa4f94.css.map": "/static/css/main.90fa4f94.css.map",
-    "main.f22c3a03.js.map": "/static/js/main.f22c3a03.js.map"
+    "main.29f425d4.js.map": "/static/js/main.29f425d4.js.map"
   },
   "entrypoints": [
     "static/css/main.90fa4f94.css",
-    "static/js/main.f22c3a03.js"
+    "static/js/main.29f425d4.js"
   ]
 }
