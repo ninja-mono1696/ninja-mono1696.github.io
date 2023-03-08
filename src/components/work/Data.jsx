@@ -12,7 +12,7 @@ export const projectsData = [
     title: "E-CARRY",
     description:
       "This is a online shopping E-commerce website for phone cases, covers, lifestyle & personal accessories. A collaborative project built by a team of 4 developers, completed in 5 days.",
-    tech: "React | Redux | JSON-Server | Chakra-UI",
+    tech: "React | Redux | NodeJS | MongoDB",
     code: "https://github.com/ninja-mono1696/acidic-rhythm-139",
     demo: "https://e-carry.netlify.app/",
     category: "mern",
